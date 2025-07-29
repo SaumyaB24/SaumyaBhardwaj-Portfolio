@@ -779,10 +779,13 @@ header {
   }
 }
 /* animation */
-.autoShow {
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
+@media (max-height: 800px) {
+  .autoShow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+  }
 }
+
 @keyframes autoShowAnimation {
   from {
     opacity: 0;
