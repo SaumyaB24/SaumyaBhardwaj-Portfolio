@@ -18,17 +18,17 @@ a:hover {
   cursor: pointer;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: var(--transition);
-    font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: var(--transition);
+  font-weight: 400;
 }
 .btn {
   display: inline-block;
@@ -80,50 +80,50 @@ h4 {
 }
 /* loader */
 #loader-container {
-    display: flex;
-    background-image: radial-gradient(circle, #000, #111, #222);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+  display: flex;
+  background-image: radial-gradient(circle, #000, #111, #222);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.loader {
+  width: 40px;
+  height: 60px;
+  position: relative;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
+  animation: sp7 2s infinite;
+}
+.loader::after {
+  --s: -1, -1;
+}
+@keyframes sp7 {
+  0%,
+  10% {
+    transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
   }
-  .loader {
-    width: 40px;
-    height: 60px;
-    position: relative;
+  33% {
+    transform: scale(var(--s, 1)) translate(0, -20px) rotate(0deg);
   }
-  .loader::before,
-  .loader::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--color-primary);
-    clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
-    animation: sp7 2s infinite;
+  66% {
+    transform: scale(var(--s, 1)) translate(10px, -20px) rotate(-90deg);
   }
-  .loader::after {
-    --s: -1, -1;
+  90%,
+  100% {
+    transform: scale(var(--s, 1)) translate(10px, -10px) rotate(-90deg);
   }
-  @keyframes sp7 {
-    0%,
-    10% {
-      transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
-    }
-    33% {
-      transform: scale(var(--s, 1)) translate(0, -20px) rotate(0deg);
-    }
-    66% {
-      transform: scale(var(--s, 1)) translate(10px, -20px) rotate(-90deg);
-    }
-    90%,
-    100% {
-      transform: scale(var(--s, 1)) translate(10px, -10px) rotate(-90deg);
-    }
-  }
+}
 /*navbar*/
 nav {
   background: var(--color-black);
@@ -189,6 +189,7 @@ header {
     border-color: var(--color-primary);
   }
 }
+
 .header-container {
   display: grid;
   grid-template-columns: 54% 38%;
@@ -218,6 +219,10 @@ header {
 }
 .header-container .title {
   color: var(--color-white);
+}
+.header-right img {
+  height: 400px;
+  width: 400px;
 }
 .button-aria {
   display: flex;
@@ -289,6 +294,10 @@ header {
   gap: 0;
   padding: 20px;
 }
+.project-box a {
+  color: #7456ff;
+  transition: all 0.3s ease;
+}
 .project-box img {
   object-fit: cover;
   height: 10rem;
@@ -297,7 +306,9 @@ header {
 }
 .project-box:hover {
   background: var(--color-primary);
-  transform: scale(1.03, 1.03);
+}
+.project-box:hover a {
+  color: var(--color-black);
 }
 .project-border {
   width: 14rem;
@@ -305,6 +316,11 @@ header {
   background: var(--color-primary);
   margin: 0 auto;
   border-radius: 0.1rem;
+}
+
+.project-box a:hover {
+  color: var(--color-white);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
 }
 /* skills */
 #SKILLS {
@@ -527,6 +543,10 @@ header {
   .header-left {
     text-align: center;
   }
+  .header-right img {
+    height: 300px;
+    width: 300px;
+  }
   .button-aria {
     justify-content: center;
     margin-top: 20px;
@@ -648,6 +668,10 @@ header {
       width: 85%;
     }
   }
+  .header-right img {
+    height: 200px;
+    width: 200px;
+  }
   /* projects */
   .project-content {
     padding: 30px;
@@ -696,61 +720,60 @@ header {
 
 /* media queries(4250px) */
 @media (max-width: 425px) {
-    h1 {
-      font-size: 25px;
-      line-height: 58px;
-      width: fit-content;
-    }
-    h2 {
-      font-size: 20px;
-      line-height: 38px;
-    }
-    h3 {
-      font-size: 15px;
-      line-height: 28px;
-    }
-    /* projects */
-    .project-content {
-      padding: 20px;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .project-box {
-      padding: 10px;
-    }
-    .project-box img {
-      height: 150px;
-      width: 150px;
-    }
-    /* strengths */
-    .hire-content {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    .hire-box {
-      gap: 10px;
-    }
-    .hire-box .top {
-      padding: 12px;
-    }
-    .hire-box .top img {
-      object-fit: cover;
-      height: 80px;
-      width: 80px;
-      border-radius: 50%;
-    }
-    .bottom {
-      gap: 3px;
-    }
-    /* skills */
-    #SKILLS h2 {
-      margin-bottom: 1.5rem;
-    }
-    .outer-box {
-      width: 90px;
-      height: 90px;
-      padding: 15px;
-      box-shadow: var(--color-white-variant) 0 0 0.3rem;
-    }
+  h1 {
+    font-size: 25px;
+    line-height: 58px;
+    width: fit-content;
   }
-  
+  h2 {
+    font-size: 20px;
+    line-height: 38px;
+  }
+  h3 {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  /* projects */
+  .project-content {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .project-box {
+    padding: 10px;
+  }
+  .project-box img {
+    height: 150px;
+    width: 150px;
+  }
+  /* strengths */
+  .hire-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .hire-box {
+    gap: 10px;
+  }
+  .hire-box .top {
+    padding: 12px;
+  }
+  .hire-box .top img {
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  .bottom {
+    gap: 3px;
+  }
+  /* skills */
+  #SKILLS h2 {
+    margin-bottom: 1.5rem;
+  }
+  .outer-box {
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    box-shadow: var(--color-white-variant) 0 0 0.3rem;
+  }
+}

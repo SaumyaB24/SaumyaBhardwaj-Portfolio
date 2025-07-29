@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="icon" href="letter-s.png" />
+    <link rel="icon" href="./assets/letter-s.png" />
     <!-- linking stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -56,17 +56,22 @@
             </p>
             <div class="button-aria">
               <a
-                href="resume.pdf"
+                href="./assets/resume.pdf"
+                target="_blank"
+                class="btn btn-primary"
+                >View Resume</a
+              >
+              <a
+                href="./assets/resume.pdf"
                 target="_blank"
                 download="resume.pdf"
-                class="btn btn-primary"
-                >Download resume</a
-              >
-              <a href="" class="btn">More</a>
+                class="btn"
+                ><i class="fa-solid fa-download"></i
+              ></a>
             </div>
           </div>
           <div class="header-right">
-            <img src="profile picture.jpg" alt="hero img" />
+            <img src="./assets/profile picture.png" alt="hero img" />
             <div class="social">
               <p>Find me on</p>
               <div class="social-link">
@@ -89,6 +94,7 @@
           </div>
         </div>
       </header>
+
       <!-- project section -->
       <section id="PROJECTS">
         <div class="container project-container">
@@ -97,50 +103,80 @@
           <div class="project-border"></div>
           <div class="project-content">
             <div class="project-box">
-              <a href="https://github.com/SaumyaB24/Healta" target="_blank"
-                ><img src="Healta.jpg" alt="Healta"
-              /></a>
-              <h3>Healta</h3>
+              <img src="./assets/Healta.jpg" alt="Healta" />
+              <h3>Wanderlust</h3>
               <p>
-                Developed a comprehensive mental health support platform using
-                frontend. Designed to provide an all-in-one solution to various
-                psychological conditions, the website offers a user-friendly
-                interface and a range of features.
+                Wanderlust is a full-stack travel planning web application that
+                allows users to explore, list, and review travel destinations.
+                Built using HTML, CSS, Bootstrap, Node.js, Express, and MongoDB
+                Atlas, it features image uploads via Cloudinary, secure user
+                authentication with Passport.js, and interactive map views using
+                OpenCage and OpenStreetMap. Key functionalities include CRUD
+                operations on listings and reviews, user login and signup, and
+                the ability to view destination locations directly on the map.
+                <br />
+                <a
+                  href="https://wanderlust-l10k.onrender.com/listings"
+                  target="_blank"
+                  >🌐 Live Demo</a
+                >
+                |
+                <a
+                  href="https://github.com/SaumyaB24/Wanderlust"
+                  target="_blank"
+                  >💻 GitHub</a
+                >
               </p>
             </div>
-            <a
-              href="https://github.com/SaumyaB24/Spotify-Clone"
-              target="_blank"
-            >
-              <div class="project-box">
-                <img src="spotify.jpg" alt="spotify" />
-                <h3>Spotify Clone</h3>
-                <p>
-                  Developed a Spotify clone using HTML5 and CSS to mimic the
-                  user interface and functionality of the popular music
-                  streaming platform. Utilized CSS flexbox and grid layout
-                  techniques to create a visually appealing and flexible layout
-                  for displaying albums, playlists, and other content, similar
-                  to the original Spotify interface.
-                </p>
-              </div>
-            </a>
-            <a
-              href="https://github.com/SaumyaB24/SimonSaysGame"
-              target="_blank"
-            >
-              <div class="project-box">
-                <img src="simonSays.png" alt="game" />
-                <h3>Simon Says game</h3>
-                <p>
-                  Developed an interactive Simon Says game using HTML5, CSS, and
-                  JavaScript to create a fun and engaging problem-solving and
-                  memory challenge.Implemented game logic to generate random
-                  sequences of colors and sounds for players to mimic, following
-                  traditional Simon Says rules.
-                </p>
-              </div>
-            </a>
+            <div class="project-box">
+              <img src="./assets/spotify.jpg" alt="spotify" />
+              <h3>Plan Point</h3>
+              <p>
+                Plan Point is a full-featured project management dashboard
+                designed to streamline organizational workflows. Built using
+                React.js and Syncfusion UI, it includes a dynamic Kanban board
+                for task tracking, detailed list views for orders, employees,
+                and customers, and over 10 interactive charts for data
+                visualization. Additional tools like a WYSIWYG editor, color
+                picker, and theme customizer enhance user experience and
+                productivity.
+                <br /><br /><br />
+                <a
+                  href="https://wanderlust-l10k.onrender.com/listings"
+                  target="_blank"
+                  >🌐 Live Demo</a
+                >
+                |
+                <a
+                  href="https://github.com/SaumyaB24/Wanderlust"
+                  target="_blank"
+                  >💻 GitHub</a
+                >
+              </p>
+            </div>
+            <div class="project-box">
+              <img src="./assets/simonSays.png" alt="game" />
+              <h3>Simon Says game</h3>
+              <p>
+                Developed an interactive Simon Says game using HTML5, CSS, and
+                JavaScript to create a fun and engaging problem-solving and
+                memory challenge.Implemented game logic to generate random
+                sequences of colors and sounds for players to mimic, following
+                traditional Simon Says rules.
+                <br />
+                <a
+                  href="https://wanderlust-l10k.onrender.com/listings"
+                  target="_blank"
+                  >🌐 Live Demo</a
+                >
+                |
+                <a
+                  href="https://github.com/SaumyaB24/Wanderlust"
+                  target="_blank"
+                  >💻 GitHub</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -150,40 +186,40 @@
           <h2>Skill & Tools</h2>
           <div class="skill-content">
             <div class="outer-box">
-              <img src="htmlLogo.png" alt="" />
+              <img src="./assets/htmlLogo.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="cssLogo.png" alt="" />
+              <img src="./assets/cssLogo.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="jsLogo.png" alt="" />
+              <img src="./assets/jsLogo.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="node.png" alt="" />
+              <img src="./assets/node.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="express.png" alt="" />
+              <img src="./assets/express.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="mongo.png" alt="" />
+              <img src="./assets/mongo.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="git.png" alt="" />
+              <img src="./assets/git.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="cLogo.png" alt="" />
+              <img src="./assets/cLogo.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="cppLogo.png" alt="" />
+              <img src="./assets/cppLogo.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="java.png" alt="" />
+              <img src="./assets/java.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="oracle.png" alt="" />
+              <img src="./assets/oracle.png" alt="" />
             </div>
             <div class="outer-box">
-              <img src="mysql.png " alt="" />
+              <img src="./assets/mysql.png " alt="" />
             </div>
           </div>
         </div>
@@ -196,7 +232,10 @@
           <div class="hire-content">
             <div class="hire-box">
               <div class="top">
-                <img src="webDev.jpg" alt="Passionate about Web Development" />
+                <img
+                  src="./assets/webDev.jpg"
+                  alt="Passionate about Web Development"
+                />
               </div>
               <div class="bottom">
                 <h4>Passionate about Web Development</h4>
@@ -210,7 +249,7 @@
             </div>
             <div class="hire-box">
               <div class="top">
-                <img src="hardwork.jpg" alt="" />
+                <img src="./assets/hardwork.jpg" alt="" />
               </div>
               <div class="bottom">
                 <h4>Dedicated and Hardworking</h4>
@@ -223,7 +262,7 @@
             </div>
             <div class="hire-box">
               <div class="top">
-                <img src="teamwork.jpg" alt="" />
+                <img src="./assets/teamwork.jpg" alt="" />
               </div>
               <div class="bottom">
                 <h4>Strong Team Player</h4>
@@ -258,7 +297,7 @@
               <i class="fa-regular fa-envelope"></i>
               <div class="div">
                 <p class="text-light">Email</p>
-                <p>saumyabhardwaj@gmail.com</p>
+                <p>saumyabhardwaj24@gmail.com</p>
               </div>
             </div>
             <div class="contact-non">
