@@ -790,7 +790,7 @@ header {
 }
 
 /* media queries(4250px) */
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 25px;
     line-height: 58px;
@@ -842,8 +842,8 @@ header {
     margin-bottom: 1.5rem;
   }
   .outer-box {
-    width: 90px;
-    height: 90px;
+    width: 65px;
+    height: 65px;
     padding: 15px;
     box-shadow: var(--color-white-variant) 0 0 0.3rem;
   }
