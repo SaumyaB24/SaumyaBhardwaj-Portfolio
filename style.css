@@ -146,7 +146,7 @@ nav {
 }
 .nav-container ul {
   display: flex;
-  gap: 40px;
+  gap: 45px;
   margin: 0;
   align-items: center;
 }
@@ -156,6 +156,9 @@ nav {
 }
 .nav-container ul li a:hover {
   color: var(--color-primary);
+}
+.socialLink {
+  display: none;
 }
 /* header */
 /* home */
@@ -246,7 +249,7 @@ header {
 }
 .social-link {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .social-link a {
   color: var(--color-primary);
@@ -293,10 +296,15 @@ header {
   flex-direction: column;
   gap: 0;
   padding: 20px;
+  position: relative;
 }
 .project-box a {
   color: #7456ff;
   transition: all 0.3s ease;
+}
+.project-box p {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 .project-box img {
   object-fit: cover;
@@ -321,7 +329,12 @@ header {
   color: var(--color-white);
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
 }
-
+.projectLinks {
+  position: absolute;
+  margin: 5px;
+  bottom: 0;
+  padding: 5px;
+}
 /* skills */
 #SKILLS {
   background: var(--color-black);
@@ -341,10 +354,8 @@ header {
 .skill-content img {
   width: 100%;
 }
-.skill-content img:hover {
-  transform: rotate(-8deg);
-}
-.outer-box {
+
+/* .outer-box {
   border: 1px solid var(--color-white-variant);
   width: 200px;
   height: 200px;
@@ -357,13 +368,42 @@ header {
   justify-content: space-evenly;
   align-items: center;
   box-shadow: var(--color-white-variant) 0 0 0.8rem;
+} */
+.outer-box {
+  border: 1px solid var(--color-white-variant);
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 50px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--color-white-variant) 0 0 0.8rem;
+  transition: all 0.3s ease;
 }
 .outer-box:hover {
-  background: var(--color-primary-variant);
+  background: rgba(255, 255, 255, 0.7); /* white with less opacity */
+  border: 1px solid var(--color-primary);
+  transform: scale(1.03);
+  box-shadow: var(--color-primary) 0 0 0.8rem;
+}
+
+/* image transform only when parent is hovered */
+.outer-box:hover img,
+.outer-box img:hover {
+  transform: rotate(-8deg);
+  transition: transform 0.3s ease;
+}
+
+/* .outer-box:hover {
+  background: #fff;
   border: 1px solid var(--color-primary);
   transform: scale(1.03, 1.03);
   box-shadow: var(--color-primary) 0 0 0.8rem;
-}
+} */
 
 /* strengths */
 #CHOOSE-ME {
@@ -487,6 +527,7 @@ header {
     overflow: hidden;
     left: -270px;
   }
+
   nav .container ul li a {
     display: inline-block;
     padding: 24px 250px;
@@ -633,6 +674,35 @@ header {
     border-radius: 50px;
     padding: 20px;
   }
+
+  /* prevent scroll when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  /* make sidebar fill height */
+  nav .container ul {
+    top: 0 !important;
+    height: 100vh !important;
+    justify-content: flex-start;
+  }
+
+  /* social links visible inside sidebar */
+  nav .container ul .socialLink {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+    padding-bottom: 2rem;
+  }
+  .socialLink a {
+    padding: 2px 4px;
+    border-radius: 50%;
+  }
+  .socialLink a:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
 }
 
 /* media queries(768px) */
@@ -777,12 +847,47 @@ header {
     padding: 15px;
     box-shadow: var(--color-white-variant) 0 0 0.3rem;
   }
+  /* prevent scroll when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  /* make sidebar fill height */
+  nav .container ul {
+    top: 0 !important;
+    height: 100vh !important;
+    justify-content: flex-start;
+  }
+
+  /* social links visible inside sidebar */
+  nav .container ul .socialLink {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+    padding-bottom: 2rem;
+  }
+  .socialLink a {
+    padding: 2px 4px;
+    border-radius: 50%;
+  }
+  .socialLink a:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
 }
 /* animation */
 @media (max-height: 800px) {
   .autoShow {
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
+  }
+}
+@media (min-width: 768px) and (max-width: 1165px) {
+  .project-content {
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+    gap: 2rem;
   }
 }
 
@@ -794,5 +899,13 @@ header {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .project-box img {
+    object-fit: cover;
+    height: 150px;
+    width: 200px;
+    border-radius: 1rem;
   }
 }
